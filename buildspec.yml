@@ -10,6 +10,6 @@ phases:
       - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .
   post_build:
     commands:
-      - docker run -dp $port_container:$port_external $IMAGE_REPO_NAME:$IMAGE_TAG
+      - docker run -p $port_container:$port_external $IMAGE_REPO_NAME:$IMAGE_TAG
 
       
